@@ -1,0 +1,2 @@
+# cursorclone
+frontend group project
