@@ -77,15 +77,17 @@ body {
 }
 
 .footer {
-    justify-content: ;
     background-color: #f8f8f8;
     color: black;
     padding: 60px 200px;
-    height: 130vh;
+    height: 80vh;
+
+}
+
+.footer .column {
     display: flex;
     gap: 140px;
     grid-template-columns: repeat(5, 1fr);
-
 
 }
 
@@ -98,7 +100,7 @@ body {
 .footer ul p {
     font-size: 14px;
     color: #a5a2a2;
-    
+
 }
 
 
@@ -107,7 +109,7 @@ body {
     margin-bottom: 20px;
     color: #a5a2a2;
     font-weight: 500;
-    
+
 }
 
 .footer-column a {
@@ -118,4 +120,12 @@ body {
     margin-bottom: 20px;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.footer .lastt{
+    color: #a5a2a2;
+    padding-top: 100px;
+    display: flex;
+    gap: 10px;
+    grid-template-columns: 1fr, 1fr;
 }
