@@ -55,8 +55,10 @@ body {
     padding: 7px 16px;
     border-radius: 15px;
     text-decoration: none;
+}
 
-
+.btn i {
+    display: none;
 }
 
 .btn .btn1 {
@@ -68,6 +70,7 @@ body {
     background: #f8f8f8;
     color: black;
     border: 1px solid black;
+    display: flex;
 
 }
 
@@ -122,10 +125,121 @@ body {
     cursor: pointer;
 }
 
-.footer .lastt{
+.footer .lastt {
     color: #a5a2a2;
     padding-top: 100px;
     display: flex;
     gap: 10px;
     grid-template-columns: 1fr, 1fr;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+    body {
+        background: #e6e3e3;
+        color: black;
+    }
+
+
+    .navbar {
+        padding-left: 10px;
+        padding-right: 75px;
+        gap: px;
+        width: 100%;
+
+    }
+
+    .navbar .logo img {
+        width: 170px;
+        cursor: pointer;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .btn {
+        display: flex;
+        gap: 10px;
+    }
+    .btn .btn1 {
+    width: 80px;
+}
+
+
+    .btn .contactsales {
+        display: none;
+    }
+
+    .btn a {
+        padding: 7px 16px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+
+    .btn i {
+        display: flex;
+        padding-top: 7px;
+    }
+
+    .btn .btn2 {
+        display: none;
+    }
+
+    .footer {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 60px 200px;
+    height: 80vh;
+
+}
+
+.footer .column {
+    display: flex;
+    gap: 140px;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+    
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .footer ul p {
+        font-size: 16px;
+        color: #a5a2a2;
+
+    }
+
+    
+
+
+    .footer-column h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #a5a2a2;
+        font-weight: 500;
+
+    }
+
+    .footer-column a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .footer .lastt {
+        color: #a5a2a2;
+        padding-top: 100px;
+        display: flex;
+        gap: 10px;
+        grid-template-columns: 1fr, 1fr;
+    }
+
 }
