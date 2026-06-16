@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog</title>
+
+<style>
+:root{
+    --bg:#d8dbe1;
+    --surface:#111418;
+    --border:#1e2329;
+    --text:#04070c;
+    --muted:#9ca3af;
+    --link:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,system-ui,-apple-system,sans-serif;
+    line-height:1.7;
+}
+
+.nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(12px);
+    background:rgba(147, 149, 152, 0.8);
+    border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:700;
+    font-size:18px;
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+}
+
+.nav-links a{
+    color:black;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.container{
+    max-width:820px;
+    margin:auto;
+    padding:80px 24px;
+}
+
+.page-title{
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:60px;
+}
+
+.entry{
+    margin-bottom:96px;
+}
+
+.meta{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.entry h2{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:24px;
+}
+
+.entry h3{
+    font-size:24px;
+    margin-top:36px;
+    margin-bottom:12px;
+}
+
+.entry p{
+    color:#040507;
+    margin-bottom:18px;
+}
+
+.entry img{
+    width:100%;
+    border-radius:14px;
+    border:1px solid var(--border);
+    margin:28px 0;
+}
+
+.entry ul{
+    padding-left:24px;
+    color:#0b0e13;
+}
+
+.entry li{
+    margin-bottom:12px;
+}
+
+.divider{
+    height:1px;
+    background:var(--border);
+    margin:80px 0;
+}
+
+@media (max-width:768px){
+
+    .page-title{
+        font-size:38px;
+    }
+
+    .entry h2{
+        font-size:30px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <div class="logo">Cursor</div>
+
+
+    <div class="nav-links">
+        <a href="#">Product</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+    </div>
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1 class="page-title" >Changelog</h1>
+
+<article class="entry">
+
+    <div class="meta">
+        Jun 10, 2026 · Changelog
+    </div>
+
+    <h2>
+        Bugbot is now over 3× faster,
+        22% cheaper, and finds
+        10% more bugs. 
+    </h2>
+
+    <p>
+        The average review time for Bugbot is now
+        approximately 90 seconds, down from
+        roughly 5 minutes.Bugbot also finds 10% more bugs per review on average — 0.62, up from 0.56 — and costs ~22% less per run.
+    </p>
+
+    <img src="bugbot-performance.webp"
+         alt="Release image">
+         <p>These performance gains are made possible by progress we've made training Composer 2.5, which now powers Bugbot. Bugbot respects model block lists, and speed and performance can vary depending on your configuration.</p>
+
+    <h3>Run Bugbot before you push</h3>
+
+    <p>
+       You can now run Bugbot and Security Review with /review before pushing code. /review prompts you to choose which agents to run, or use /review-bugbot and /review-security directly.
+
+/review also syncs with Bugbot on GitHub and GitLab. If you run /review and then open a PR with the same diff, Bugbot recognizes it, skips the review, and leaves a comment noting it has already reviewed that diff.
+
+Available in Cursor 3.7+ and on cursor.com/agents, with support in CLI coming soon.
+    </p>
+    <img src="image.png" alt="">
+
+    <h3>Only review what's new in your PR</h3>
+
+    <p>
+        You can now configure Bugbot to only review what's new since the last review, keeping feedback focused on your latest updates.
+
+Learn more in our docs.
+    </p>
+   
+</article>
+
+<div class="divider"></div>
+
+<article class="entry">
+
+    <div class="meta">
+        Jun 5, 2026 · Version 3.7
+    </div>
+
+    <h2>Design Mode Improvements</h2>
+
+    <p>
+        With Design Mode in the Cursor browser, you can click, draw, or describe changes by voice to help agents update your UI.
+    </p>
+
+    <h3>Multi-select elements</h3>
+
+    <p>
+        Click on two or more elements together in the browser. Cursor sees the selected elements, their code, the surrounding layout, and the visual relationships on the page.
+
+    </p>
+    <img src=".vscode/img2.jpg" alt="">
+
+    <h3>Voice input</h3>
+
+    <p>
+       Narrate changes through the Design Mode overlay. The mic stays available while an agent is mid-run, so you can queue the next change by voice without waiting for the previous one to finish
+    </p>
+    <img src=".vscode/img3.jpg" alt="">
+
+</article>
+<div class="container">
+
+
+<article class="entry">
+
+    <div class="meta">
+       Jun 4, 2026
+ · Changelog
+
+    </div>
+    <h2>Custom stores, custom tools, and auto-review for the Cursor SDK</h2>
+    <p>We've shipped a batch of new functionality across the TypeScript and Python SDKs. You can now choose how agent and run metadata is persisted, expose your own functions to the agent as tools, route local tool calls through auto-review, and nest subagents to any depth. This release also brings a set of reliability, performance, and platform fixes that make local and cloud SDK agents easier to run in production scripts, CI, and custom integrations.</p>
+<h3>Custom tools</h3>
+<p>You can now hand the local agent your own tools by passing function definitions through local.customTools, on Agent.create() or per send(). The SDK exposes them to the agent through a built-in MCP server called custom-user-tools, so the model calls your code through the same path and the same permission gate as any other MCP tool. </p>
+
+<p>Before this, exposing a custom capability meant standing up your own stdio or remote HTTP MCP server and wiring it into the agent. Now a function definition is enough. Custom tools are also visible to every subagent of a parent agent, so a tool you define once is available throughout the whole run.</p>
+<h3>Auto-review</h3>
+<p>By default, a local SDK agent runs tool calls without asking for approval, since there's no human in the loop in a headless run. Set local.autoReview to route those calls through auto-review instead. A classifier decides which calls run automatically and which to hold back, rather than bypassing review entirely.</p>
+<p>You steer that classifier with natural-language instructions in permissions.json. The autoRun.allow_instructions field describes call shapes to lean toward allowing, and autoRun.block_instructions describes the ones to hold for review. For example, you can allow read-only inspections of build artifacts while always pausing on destructive operations like deletes.</p>
+<img src="Screenshot 2026-06-15 at 15-05-41 Custom stores custom tools and auto-review for the Cursor SDK · Cursor.png" alt="">
+<h3>JSONL and costom stores</h3>
+<p>Both SDKs persist agent and run metadata so you can resume an agent after a process restart. Until now, that store was SQLite. You can now opt into a JSONL store instead, which writes a plain, append-only file you can read, diff, and check into version control. Both SqliteLocalAgentStore and JsonlLocalAgentStore are exported directly.</p>
+<p>If neither default fits your setup, implement the public LocalAgentStore interface and pass it through local.store. Build an in-memory store for ephemeral CI runs, or back persistence with Postgres when you want agent state to live next to the rest of your application data. The Python SDK exposes host, JSONL, and composed JSONL stores through the bridge.</p>
+<h3>Nested subagent</h3>
+<p>Subagents can now spawn their own subagents, and so on. A reviewer subagent can delegate to a test-writer, which can delegate further, with each level keeping its own prompt and model. There's nothing to turn on; a subagent session registers the executor it needs to call Task, so nesting works automatically for any agent that defines subagents.</p>
+<h3>Reliability, performance, and platform improvements</h3>
+<p>This release also includes a batch of quality-of-life fixes across both SDKs.</p>
+<img src="screenshot2.png" alt="">
+<p>Run npm install @cursor/sdk or pip install cursor-sdk to upgrade. Scripts pinning composer-2 move to Composer 2.5 automatically, and requestId is a safe addition to your run metadata schema. See the TypeScript and Python docs for full details.</p>
+<article class="entry">
+
+    <div class="meta3.4">
+     3.7  Jun 4, 2026
+    </div>
+    <h2>Canvas Design Mode and Context Usage Report</h2>
+    <p>With canvases, agents can create interactive artifacts like dashboards, reports, and internal tools that you can share with your team.This release introduces Design Mode for faster canvas editing, new ways to understand context usage, and other quality-of-life improvements.</p>
+    <h3>Design Mode in canvases</h3>
+    <p>Design Mode is now available in canvases.Select and annotate UI elements directly in a canvas to guide Cursor's edits, just as you would in the browser. Instead of describing the change in text, you can point to it, provide feedback, and iterate more quickly.</p>
+<img src="screenshot3.png" alt="">
+<h3>Context usage report in canvas</h3>
+<p>Cursor can now show your agent's context usage as an interactive report in a canvas.
+
+The context explorer breaks down where tokens go across the system prompt, tool definitions, rules, skills, and more. Because it's a canvas, you can ask the agent follow-up questions, and it can customize the report to answer your specific questions.
+Click the Debug with Agent button embedded in the canvas to ask Cursor to identify opportunities to reduce context usage in a new conversation.</p>
+<img src="snapshot.jpg" alt="">
+<details class="release-notes" open>
+    <summary>Canvas Improvements (4)</summary>
+
+    <ul>
+        <li>Shared canvases can now be opened full-screen in the browser, making them easier to present to others.</li>
+        <li>Added the ability for agents to embed buttons in canvases that will run a specific prompt when clicked.</li>
+        <li>Improved the agent's ability to fix canvas type errors.</li>
+        <li>Improved component styling, and added more chart customization functionality.</li>
+    </ul>
+</details>
+<div class="meta3.4">
+       Jun 3, 2026
+    </div>
+    <h2>Organizations for Cursor Enterprise</h2>
+    <p>Enterprise customers can now manage multiple Cursor teams from one place, with different security, governance, budget, and feature controls for each. These capabilities are now generally available to all Enterprise customers.</p>
+<img src="Screenshot 4.png" alt="">
+<h2>Organizations</h2>
+<p>An organization is the top-level container for your company's identity, administration, and membership. It gives admins one place to view and manage their entire Cursor setup, including a rollup of spend and token usage across every team.</p>
+<img src="snapshot2.jpg" alt="">
+<h3>Teams</h3>
+<p>Teams are the operating unit for a department, region, or subsidiary. This is what admins manage as their Cursor org today. We've moved that unit under an organization, so you can run multiple teams, each with its own security, governance, spend, and feature settings.</p>
+<p>A user can belong to more than one team, with a different role in each. For current customers, your existing team is preserved and becomes the default home for login, routing, and creating new teams.</p>
+<img src="Screenshot6.png" alt="">
+<h3>Groups</h3>
+<p>Groups are a lightweight collection of users that can sit across or within teams. They give cohorts of users separate model access, spend limits, and agent permissions without standing up a whole new team. When a user belongs to more than one team or group, the most permissive setting wins.</p>
+<img src="snapshot6.jpg" alt="">
+<p>Learn more in our announcement post or docs</p>
+<details class="inprovement2" open>
+    <summary>Improvements (5)</summary>
+
+    <ul>
+        <li>Multi-team support so users can be on multiple teams at once</li>
+        <li>Organization-level IDP management.</li>
+        <li>Organization-level usage analytics, with drill downs to each team.</li>
+        <li>Admins can move users between teams through the dashboard, API, or CSV.</li>
+        <li>New users joining a team inherit settings and permissions automatically</li>
+    </ul>
+</details>
+</div>
+ <footer class="site-footer">
+        <div class="footer-links-container">
+            
+            <div class="footer-column">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Code Review</a></li>
+                    <li><a href="#">Tab</a></li>
+                    <li><a href="#">CLI</a></li>
+                    <li><a href="#">Cloud Agents</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Workshops</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Future</a></li>
+                    <li><a href="#">Anysphere</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Data Use</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <span>© 2026 Anysphere, Inc.</span>
+                <span class="certified"><span class="check-icon">✓</span> SOC 2 Certified</span>
+            </div>
+            <div class="footer-controls">
+                <div class="toggle-pill">🖥️ ☀️ 🌙</div>
+                <div class="lang-selector">🌐 English ˇ</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+</body>
+</html>
