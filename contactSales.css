@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: white;
+    color: black;
+}
+.oga{
+    width: 100%;
+    margin: auto;
+    padding: 90px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    /* background: red; */
+}
+
+.left h1{
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.hoo{
+    background: rgb(240, 240, 239);
+    padding: 20px;
+    height: 45vh;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+.left p{
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    max-width: 650px;
+}
+.autor{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.autor img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.autor h4{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.autor span{
+    font-size: 15px;
+    color: #bdbdbd;
+}
+.story{
+    display: inline-block;
+    margin-bottom: 70px;
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+}
+.brands{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 50px;
+padding-top: 20px;
+/* background: black; */
+}
+
+.yoo{
+width: 100px;
+}
+.right{
+    background: #f0f0ef;
+    padding: 20px ;
+    border-radius: 8px;
+    position: fixed;
+    width: 47%;
+}
+.right h2{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.group{
+    margin-bottom: 20px;
+}
+.group label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 600;
+}
+
+.group input{
+    width: 100%;
+    padding: 15px;
+    background: rgb(240, 240, 239);
+    color: black;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid gray;
+}
+.group select {
+    width: 100%;
+    padding: 15px;
+    background: rgb(240, 240, 239);
+    color: black;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.uoo{
+width: 120px;
+height: 45px;
+border: none;
+border-radius: 50px;
+background: black;
+color: white;
+font-weight: 700 ;
+cursor: pointer;
+}
+
+.uoo:hover{
+background: rgb(74, 73, 73);
+}
+
+@media (min-width:768px) and (max-width:991px) {
+   
+.oga{
+    display: flex;
+    flex-direction: column;
+}
+
+.left h1{
+    display: none;
+}
+.hoo{
+    display: none;
+}
+
+.brands{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 50px;
+padding-top: 20px;
+/* background: black; */
+}
+
+.right{
+    width: 95%;
+}
+
+}
